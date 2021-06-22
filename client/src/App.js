@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios'
 
-const port = process.env.PORT || 5000;
+//const port = process.env.PORT || 5000;
 
 class App extends Component {
   state = {
@@ -10,7 +10,7 @@ class App extends Component {
   };
   
   componentDidMount() {
-    axios.get(`http://localhost:${port}/api/v1/say-something`).then((res) => {
+    axios.get(`/api/v1/say-something`).then((res) => {
       console.log('soy la respuesta', res)
       const response = res.data;
       this.setState({response});
